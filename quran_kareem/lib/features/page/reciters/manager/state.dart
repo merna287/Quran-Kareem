@@ -1,9 +1,9 @@
 abstract class AppState {}
 
-/// ✅ الحالة الابتدائية
+
 class ReciterInitial extends AppState {}
 
-/// ✅ تحميل قائمة القراء
+
 class ReciterLoading extends AppState {}
 
 class ReciterLoaded extends AppState {
@@ -16,7 +16,7 @@ class ReciterError extends AppState {
   ReciterError(this.message);
 }
 
-/// ✅ تحميل التسجيلات الصوتية
+
 class AudioLoading extends AppState {}
 
 class AudioLoaded extends AppState {

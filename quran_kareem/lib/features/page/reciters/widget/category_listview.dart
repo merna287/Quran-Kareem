@@ -7,7 +7,7 @@ import 'package:quran_kareem/features/page/reciters/widget/category.dart';
 
 class CategoryListview extends StatelessWidget {
   final String searchText;
-  final Map<int, List<String>> audioLinksMap; // جعلها final وإضافة required
+  final Map<int, List<String>> audioLinksMap; 
 
   const CategoryListview({super.key, required this.searchText, required this.audioLinksMap});
 

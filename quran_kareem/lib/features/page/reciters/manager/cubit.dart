@@ -10,7 +10,7 @@ class AppCubit extends Cubit<AppState> {
   List<Map<String, dynamic>> moshafDetails = [];
   List<String> audioList = [];
 
-  /// ✅ *جلب قائمة المصاحف والمقرئين*
+  
   Future<void> fetchMoshafDetails() async {
     emit(ReciterLoading());
 
@@ -38,7 +38,7 @@ class AppCubit extends Cubit<AppState> {
     }
   }
 
-  /// ✅ *جلب قائمة التسجيلات الصوتية لمصحف معين*
+  
   Future<void> fetchAudioFiles(String serverUrl, int surahTotal) async {
     emit(AudioLoading());
 
@@ -49,7 +49,7 @@ class AppCubit extends Cubit<AppState> {
       }
 
       for (int i = 1; i <= surahTotal; i++) {
-        String formattedIndex = i.toString().padLeft(3, '0'); // مثل: 001, 002, 003
+        String formattedIndex = i.toString().padLeft(3, '0'); 
         String audioUrl = "$serverUrl$formattedIndex.mp3";
         audioList.add(audioUrl);
       }

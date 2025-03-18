@@ -10,7 +10,7 @@ class Category extends StatelessWidget {
   final String reciterName;
   final int surahTotal;
   final Map<String, dynamic> moshaf;
-  final Map<int, List<String>> audioLinksMap; // ✅ تمرير البيانات كمطلوبة
+  final Map<int, List<String>> audioLinksMap; 
 
   const Category({
     super.key,
@@ -18,18 +18,18 @@ class Category extends StatelessWidget {
     required this.reciterName,
     required this.surahTotal,
     required this.moshaf,
-    required this.audioLinksMap, // ✅ إضافتها هنا
+    required this.audioLinksMap, 
   });
 
   @override
   Widget build(BuildContext context) {
-    int targetMoshafId = moshaf["moshaf_id"]; // ✅ استخراج `moshaf_id`
+    int targetMoshafId = moshaf["moshaf_id"]; 
 
     return InkWell(
       onTap: () {
         context.go('/detailsPage', extra: {
           "moshaf": moshaf,
-          "audioList": audioLinksMap[targetMoshafId] ?? [], // ✅ تمرير البيانات بشكل آمن
+          "audioList": audioLinksMap[targetMoshafId] ?? [], 
         });
 
         print("to detailspage ${moshaf["moshaf_name"]}");

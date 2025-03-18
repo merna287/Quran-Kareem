@@ -41,16 +41,16 @@ Future<List<Map<String, dynamic>>> fetchMoshafDetails(Map<int, List<String>> aud
           "surah_total": totalSurahs,
         });
 
-        print("📜 تمت إضافة المصحف: ${moshaf["name"]}");
+        print("📜 Done: ${moshaf["name"]}");
       }
     }
 
     audioLinks.addAll(tempAudioLinksMap);
-    print("🎧 إجمالي التسجيلات الصوتية: ${audioLinks.length}");
+    print("🎧 Total: ${audioLinks.length}");
 
     return moshafDetails;
   } catch (e) {
-    print("⚠️ خطأ أثناء جلب البيانات: $e");
+    print("⚠️ Error: $e");
     return [];
   }
 }
